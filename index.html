@@ -23,7 +23,7 @@
 }
 
 *{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth; overflow-x:hidden;}
 body{
   margin:0;
   background:var(--paper);
@@ -31,7 +31,14 @@ body{
   font-family:'Noto Sans TC', sans-serif;
   font-weight:400;
   line-height:1.75;
+  overflow-x:hidden;
+  word-break:break-word;
+  overflow-wrap:anywhere;
 }
+img, svg{ max-width:100%; height:auto; }
+a{ overflow-wrap:anywhere; word-break:break-word; }
+table{ table-layout:fixed; }
+table td, table th{ overflow-wrap:anywhere; word-break:break-word; }
 h1,h2,h3,h4{
   font-family:'Noto Serif TC', serif;
   color:var(--ink);
@@ -380,6 +387,7 @@ details.qa-item .answer::before{
   margin-bottom:24px;
 }
 .map-figure svg{width:100%; height:auto; display:block;}
+.map-figure img{max-width:100%; width:100%; height:auto; display:block; border-radius:8px;}
 .map-caption{font-size:.82rem; color:var(--ink-soft); margin-top:10px; text-align:center;}
 
 /* resources */
